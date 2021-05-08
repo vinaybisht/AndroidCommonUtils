@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'maven-publish'
+    id 'com.github.dcendents.android-maven'
 }
 
 android {
@@ -8,11 +10,8 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "vny.bst.common.utils"
         minSdkVersion 22
         targetSdkVersion 30
-        versionCode 1
-        versionName "0.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
