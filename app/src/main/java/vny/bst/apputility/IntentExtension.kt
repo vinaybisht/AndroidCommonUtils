@@ -33,12 +33,13 @@ fun Context.openUrl(url: String) {
  *
  **/
 
-fun Context.openActivity(activity: Class<AppCompatActivity>, bundle: Bundle? = null) {
-    Intent(this, activity).apply {
+fun Context.openActivity(activity: AppCompatActivity, bundle: Bundle? = null) {
+    Intent(this, activity::class.java).apply {
         bundle?.let {
             putExtras(it)
         }
         startActivity(this)
     }
 }
+
 
